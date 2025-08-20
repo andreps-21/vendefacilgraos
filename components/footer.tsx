@@ -5,15 +5,13 @@ export default function Footer() {
   return (
     <footer className="bg-foreground text-background">
       <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* About Us */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Sobre Nós</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              A Real Fazendas é muito mais que uma imobiliária de imóveis rurais e uma empresa de soluções para que os
-              mais diversos tipos de investidores encontrem as melhores oportunidades de profissionais com
-              especialidades interdisciplinares contando em seu quadro pessoal para assessoria comercial, fiscal,
-              contábil, jurídica e agronômica.
+              A Vende Fácil Grãos é uma plataforma especializada em conectar produtores rurais diretamente aos compradores de grãos. 
+              Eliminamos intermediários desnecessários, garantindo transparência total e preços justos para quem produz no campo.
             </p>
           </div>
 
@@ -28,17 +26,17 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
-                  Fazendas
+                  Comprar Grãos
                 </a>
               </li>
               <li>
                 <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
-                  Vender Imóvel
+                  Vender Grãos
                 </a>
               </li>
               <li>
                 <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
-                  Seja um Corretor Parceiro
+                  Seja um Parceiro
                 </a>
               </li>
               <li>
@@ -47,6 +45,21 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
+          </div>
+
+          {/* Contato */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Contato</h3>
+            <div className="space-y-3 text-sm">
+              <div>
+                <p className="text-muted-foreground">Telefone:</p>
+                <p className="font-medium">+55 63 9120-8484</p>
+              </div>
+              <div>
+                <p className="text-muted-foreground">E-mail:</p>
+                <p className="font-medium">contato@vendefacilgraos.com.br</p>
+              </div>
+            </div>
           </div>
 
           {/* Central de Ajuda */}
@@ -64,20 +77,21 @@ export default function Footer() {
           {/* Newsletter */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
-            <p className="text-sm text-muted-foreground mb-4">Receba por email nossos conteúdos sobre imóveis.</p>
+            <p className="text-sm text-muted-foreground mb-4">Receba por email nossos conteúdos sobre grãos e mercado agrícola.</p>
             <div className="space-y-3">
               <Input type="text" placeholder="Nome" className="bg-background text-foreground" />
               <Input type="email" placeholder="E-mail" className="bg-background text-foreground" />
-              <Button className="w-full bg-primary hover:bg-primary/90">Cadastrar</Button>
+              <Button className="w-full bg-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola text-white transition-colors">Cadastrar</Button>
             </div>
           </div>
         </div>
 
         <div className="border-t border-muted-foreground/20 mt-8 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © Real Fazendas 2024. Todos os direitos reservados - CNPJ 41.676.502/0001-82 - CRECI 60465 CJ 33.245
+            © Vende Fácil Grãos 2025. Todos os direitos reservados
           </p>
           <p className="text-sm text-muted-foreground mt-2">Política de Privacidade</p>
+          <p className="text-sm text-muted-foreground mt-2">Desenvolvido por Gooding Solutions</p>
         </div>
       </div>
     </footer>

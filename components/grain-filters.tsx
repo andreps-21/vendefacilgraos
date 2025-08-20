@@ -163,7 +163,7 @@ export default function GrainFilters() {
       </div>
 
       {/* Search Button */}
-      <Button className="w-full bg-campo-green hover:bg-campo-green/90 text-white">BUSCAR</Button>
+      <Button className="w-full bg-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola text-white transition-colors">BUSCAR</Button>
     </div>
   )
 }

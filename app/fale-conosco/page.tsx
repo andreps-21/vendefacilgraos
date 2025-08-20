@@ -6,7 +6,7 @@ import WhatsAppFloat from "@/components/whatsapp-float"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, Phone } from "lucide-react"
+import { Mail, Phone, MapPin, Clock } from "lucide-react"
 
 export default function FaleConoscoPage() {
   return (
@@ -31,32 +31,60 @@ export default function FaleConoscoPage() {
           <div className="space-y-8">
             <div>
               <h2 className="text-xl font-semibold mb-4">
-                Para falar conosco preencha o formulário ou utilize as informações de contato disponíveis.
+                Entre em contato conosco para dúvidas sobre grãos, parcerias ou suporte técnico.
               </h2>
             </div>
 
             <div className="space-y-6">
               {/* Email */}
               <div className="flex items-start gap-4">
-                <div className="bg-primary text-primary-foreground p-3 rounded-full">
+                <div className="bg-verde-campo text-white p-3 rounded-full">
                   <Mail className="h-6 w-6" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg">E-mail</h3>
-                  <p className="text-muted-foreground">contato@realfazendas.com.br</p>
+                  <p className="text-muted-foreground">contato@vendefacilgraos.com.br</p>
                 </div>
               </div>
 
               {/* Phone */}
               <div className="flex items-start gap-4">
-                <div className="bg-primary text-primary-foreground p-3 rounded-full">
+                <div className="bg-verde-campo text-white p-3 rounded-full">
                   <Phone className="h-6 w-6" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg">Telefone</h3>
-                  <p className="text-primary font-medium">(62) 9 816... ver telefone</p>
+                  <p className="text-verde-campo font-medium">+55 63 9120-8484</p>
                   <p className="text-sm text-muted-foreground mt-1">
-                    <strong>Gelson Aguiar</strong> - Diretor Comercial - CRECI GO28905
+                    <strong>Suporte Vende Fácil Grãos</strong> - Atendimento Especializado
+                  </p>
+                </div>
+              </div>
+
+              {/* Address */}
+              <div className="flex items-start gap-4">
+                <div className="bg-verde-campo text-white p-3 rounded-full">
+                  <MapPin className="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg">Endereço</h3>
+                  <p className="text-muted-foreground">Palmas, TO - Brasil</p>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    Plataforma 100% digital para todo o Brasil
+                  </p>
+                </div>
+              </div>
+
+              {/* Business Hours */}
+              <div className="flex items-start gap-4">
+                <div className="bg-verde-campo text-white p-3 rounded-full">
+                  <Clock className="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg">Horário de Atendimento</h3>
+                  <p className="text-muted-foreground">Segunda a Sexta: 8h às 18h</p>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    Sábado: 8h às 12h
                   </p>
                 </div>
               </div>
@@ -65,6 +93,9 @@ export default function FaleConoscoPage() {
 
           {/* Contact Form */}
           <div className="bg-muted p-8 rounded-lg">
+            <h3 className="text-xl font-semibold mb-6 text-center text-verde-campo">
+              Envie sua mensagem
+            </h3>
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
@@ -88,8 +119,8 @@ export default function FaleConoscoPage() {
                 <Textarea placeholder="Mensagem" rows={6} className="bg-background resize-none" />
               </div>
 
-              <Button type="submit" className="bg-primary hover:bg-primary/90 px-8">
-                Enviar
+              <Button type="submit" className="bg-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola text-white px-8 transition-colors">
+                Enviar Mensagem
               </Button>
             </form>
           </div>

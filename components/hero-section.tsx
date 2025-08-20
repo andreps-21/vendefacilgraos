@@ -21,12 +21,7 @@ export function HeroSection() {
             Conectamos produtores rurais diretamente ao mercado comprador. Cadastre seus grãos, defina o preço por saca
             e venda com agilidade e transparência.
           </p>
-          <Button
-            size="lg"
-            className="bg-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola text-white transition-colors"
-          >
-            Buscar Grãos
-          </Button>
+
         </div>
       </div>
     </section>

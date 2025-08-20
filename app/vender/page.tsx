@@ -3,6 +3,7 @@ import Footer from "@/components/footer"
 import CTASection from "@/components/cta-section"
 import WhatsAppFloat from "@/components/whatsapp-float"
 import { Button } from "@/components/ui/button"
+import { Package, Users, Shield, Truck, TrendingUp, Star } from "lucide-react"
 
 export default function VenderPage() {
   return (
@@ -13,13 +14,13 @@ export default function VenderPage() {
       <section className="bg-gradient-to-b from-gray-50 to-white py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 font-serif">
-            Venda seu imóvel mais rápido e com <span className="text-primary">muito mais segurança.</span>
+            Venda seus grãos com <span className="text-verde-campo">agilidade e transparência</span>
           </h1>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            A Real Fazendas te ajuda durante todo o processo de venda, do anúncio até a documentação.
+            Conectamos você diretamente aos melhores compradores do mercado, sem intermediários e com preços justos.
           </p>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-3">
-            Começar um anúncio
+          <Button size="lg" className="bg-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola text-white px-8 py-3 transition-colors">
+            Cadastrar Grãos
           </Button>
         </div>
       </section>
@@ -29,93 +30,105 @@ export default function VenderPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-serif">
-              Venda o seu imóvel com facilidade e sem burocracia
+              Como funciona a venda de grãos na Vende Fácil Grãos
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Nosso time de especialistas garante um processo de venda muito mais seguro, transparente e ágil.
+              Processo simples, rápido e transparente para conectar produtores aos melhores compradores do mercado.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* Step 1 */}
             <div className="text-center">
-              <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                1
+              <div className="w-16 h-16 bg-verde-campo text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                <Package className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-foreground">
-                Cadastre seu imóvel para criar o anúncio, de graça.
+                Cadastre seus grãos
               </h3>
               <p className="text-muted-foreground text-sm">
-                Nosso fotógrafo profissional e piloto de drone visita seu imóvel para fazer as fotos e o tour virtual,
-                gratuitamente. Seu anúncio fica ainda mais atrativo.
+                Informe o tipo, quantidade, qualidade, preço e localização dos seus grãos. Processo 100% digital e gratuito.
               </p>
             </div>
 
             {/* Step 2 */}
             <div className="text-center">
-              <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                2
+              <div className="w-16 h-16 bg-verde-campo text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                <Users className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Alcance milhares de compradores.</h3>
+              <h3 className="text-xl font-semibold mb-3 text-foreground">Alcance compradores qualificados</h3>
               <p className="text-muted-foreground text-sm">
-                Divulgamos seu imóvel em nosso site, nas redes sociais e em outros portais. Suas chances de vender ficam
-                ainda maiores.
+                Sua oferta é exibida para milhares de compradores certificados em todo o Brasil.
               </p>
             </div>
 
             {/* Step 3 */}
             <div className="text-center">
-              <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                3
+              <div className="w-16 h-16 bg-verde-campo text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                <Shield className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Conte com o nosso time de especialistas.</h3>
+              <h3 className="text-xl font-semibold mb-3 text-foreground">Negociação segura</h3>
               <p className="text-muted-foreground text-sm">
-                Nossos Especialistas de Vendas buscam o comprador ideal e realizam as visitas. Você vende 3 vezes mais
-                rápido, e com muito mais comodidade.
+                Conectamos você diretamente ao comprador, com toda a segurança e transparência necessárias.
               </p>
             </div>
 
             {/* Step 4 */}
             <div className="text-center">
-              <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                4
+              <div className="w-16 h-16 bg-verde-campo text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                <Truck className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-foreground">
-                Receba assessoria jurídica gratuita para cuidar das documentações.
+                Venda realizada
               </h3>
               <p className="text-muted-foreground text-sm">
-                Nosso time de advogados cuida da parte burocrática para você ter ainda mais segurança e menos
-                preocupações.
+                Após a negociação, você recebe o pagamento e organiza a entrega dos grãos ao comprador.
               </p>
             </div>
           </div>
 
           <div className="text-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-3">
-              Começar um anúncio
+            <Button size="lg" className="bg-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola text-white px-8 py-3 transition-colors">
+              Começar a vender
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Partner Program Section */}
+      {/* Benefits Section */}
       <section className="py-16 px-4 bg-gradient-to-b from-amber-50 to-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-serif">
-            Com a Real Fazendas você pode ganhar dinheiro indicando imóveis à venda.
+            Por que escolher a Vende Fácil Grãos?
           </h2>
-          <p className="text-xl text-foreground mb-2">Basta se cadastrar e começar a indicar!</p>
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Vantagens exclusivas para produtores que querem maximizar seus lucros na venda de grãos.
+          </p>
 
-          <div className="mt-8 mb-8">
-            <h3 className="text-2xl font-bold text-foreground mb-2">Programa</h3>
-            <h4 className="text-3xl font-bold text-primary mb-6">Corretor Parceiro</h4>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Ganhe comissões indicando propriedades rurais para nossa rede de especialistas. É simples, rápido e você
-              pode trabalhar de onde estiver.
-            </p>
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-3">
-              Quero Participar
-            </Button>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="text-center">
+              <div className="w-12 h-12 bg-verde-campo text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Preços Justos</h3>
+              <p className="text-sm text-muted-foreground">Sem intermediários, você recebe o valor real pelo seu produto.</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-12 h-12 bg-verde-campo text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Transparência Total</h3>
+              <p className="text-sm text-muted-foreground">Processo claro e sem surpresas, do cadastro até a venda.</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-12 h-12 bg-verde-campo text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                <Star className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Compradores Qualificados</h3>
+              <p className="text-sm text-muted-foreground">Acesso a uma rede de compradores certificados e confiáveis.</p>
+            </div>
           </div>
         </div>
       </section>

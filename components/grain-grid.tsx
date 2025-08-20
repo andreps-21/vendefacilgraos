@@ -185,8 +185,11 @@ export default function GrainGrid() {
                 </div>
               </div>
 
-              <Link href={`/grao/${grain.slug}`}>
-                <Button className="w-full bg-campo-green hover:bg-campo-green/90 text-white">Ver Detalhes</Button>
+              <Link
+                href={`/grao/${grain.slug}`}
+                className="w-full bg-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola text-white py-2 px-4 rounded-md font-medium transition-colors text-center block"
+              >
+                Ver Detalhes
               </Link>
             </div>
           </div>

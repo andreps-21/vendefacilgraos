@@ -1,6 +1,19 @@
+"use client"
+
 import { Phone, Mail, Search } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Textarea } from "@/components/ui/textarea"
 
 export default function Header() {
   return (
@@ -14,8 +27,119 @@ export default function Header() {
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <Phone className="h-4 w-4" />
-            <span>Receber uma ligação</span>
+            <Dialog>
+              <DialogTrigger asChild>
+                <button className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer">
+                  <Phone className="h-4 w-4" />
+                  <span>Receber uma ligação</span>
+                </button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-[500px]">
+                <DialogHeader>
+                  <DialogTitle className="text-2xl font-bold text-center text-verde-campo">
+                    Solicitar Ligação
+                  </DialogTitle>
+                </DialogHeader>
+                
+                <div className="space-y-6 py-4">
+                  {/* Informações Pessoais */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="name">Nome Completo *</Label>
+                      <Input
+                        id="name"
+                        placeholder="Seu nome completo"
+                      />
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <Label htmlFor="phone">Telefone *</Label>
+                      <Input
+                        id="phone"
+                        placeholder="(00) 00000-0000"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="email">E-mail</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="seu@email.com"
+                    />
+                  </div>
+
+                  {/* Assunto da Ligação */}
+                  <div className="space-y-2">
+                    <Label htmlFor="subject">Assunto da Ligação *</Label>
+                    <Select>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Selecione o assunto" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="vender-graos">Quero vender grãos</SelectItem>
+                        <SelectItem value="comprar-graos">Quero comprar grãos</SelectItem>
+                        <SelectItem value="parceria">Quero ser parceiro</SelectItem>
+                        <SelectItem value="duvidas">Dúvidas sobre a plataforma</SelectItem>
+                        <SelectItem value="suporte">Suporte técnico</SelectItem>
+                        <SelectItem value="outros">Outros assuntos</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  {/* Melhor Horário */}
+                  <div className="space-y-2">
+                    <Label htmlFor="best-time">Melhor Horário para Ligação *</Label>
+                    <Select>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Selecione o horário" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="manha">Manhã (8h às 12h)</SelectItem>
+                        <SelectItem value="tarde">Tarde (13h às 17h)</SelectItem>
+                        <SelectItem value="noite">Noite (18h às 20h)</SelectItem>
+                        <SelectItem value="flexivel">Horário flexível</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  {/* Mensagem */}
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Mensagem (Opcional)</Label>
+                    <Textarea
+                      id="message"
+                      placeholder="Descreva brevemente o que você precisa ou sua dúvida..."
+                      rows={3}
+                    />
+                  </div>
+
+                  {/* Urgência */}
+                  <div className="space-y-2">
+                    <Label htmlFor="urgency">Nível de Urgência</Label>
+                    <Select>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Selecione a urgência" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="baixa">Baixa - Pode aguardar</SelectItem>
+                        <SelectItem value="media">Média - Em breve</SelectItem>
+                        <SelectItem value="alta">Alta - Urgente</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+
+                <div className="flex justify-end space-x-3 pt-4">
+                  <Button variant="outline" className="border-verde-campo text-verde-campo hover:bg-verde-campo hover:text-white">
+                    Cancelar
+                  </Button>
+                  <Button className="bg-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola text-white">
+                    Solicitar Ligação
+                  </Button>
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       </div>

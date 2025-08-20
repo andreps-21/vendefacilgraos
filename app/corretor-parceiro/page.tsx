@@ -3,7 +3,7 @@ import Footer from "@/components/footer"
 import CTASection from "@/components/cta-section"
 import WhatsAppFloat from "@/components/whatsapp-float"
 import { Button } from "@/components/ui/button"
-import { Calendar, DollarSign, Clock, Users, Zap, TrendingUp } from "lucide-react"
+import { Calendar, DollarSign, Clock, Users, Zap, TrendingUp, Handshake, Globe } from "lucide-react"
 
 export default function CorretorParceiroPage() {
   return (
@@ -14,14 +14,14 @@ export default function CorretorParceiroPage() {
       <section className="bg-gradient-to-b from-background to-muted/30 py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
-            Você recomenda a <span className="text-primary">Real Fazendas</span> e nós{" "}
-            <span className="text-primary">trabalhamos por você</span>
+            Seja um <span className="text-verde-campo">Parceiro Vende Fácil Grãos</span> e{" "}
+            <span className="text-verde-campo">ganhe comissões</span>
           </h1>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Receba comissão sempre que um imóvel indicado for vendido pela nossa equipe.
+            Conecte produtores rurais aos melhores compradores e receba comissões por cada negociação realizada.
           </p>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3">
-            Seja um Corretor Parceiro
+          <Button size="lg" className="bg-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola text-white px-8 py-3 transition-colors">
+            Seja um Parceiro
           </Button>
         </div>
       </section>
@@ -33,26 +33,26 @@ export default function CorretorParceiroPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+              <div className="w-16 h-16 bg-verde-campo text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                 1
               </div>
-              <h3 className="text-xl font-semibold mb-3">Você indica o imóvel e contatamos o proprietário</h3>
+              <h3 className="text-xl font-semibold mb-3">Você conecta produtores e compradores</h3>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+              <div className="w-16 h-16 bg-verde-campo text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                 2
               </div>
               <h3 className="text-xl font-semibold mb-3">
-                A Real Fazendas negocia com o proprietário e anuncia o imóvel
+                A Vende Fácil Grãos facilita a negociação e venda
               </h3>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+              <div className="w-16 h-16 bg-verde-campo text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                 3
               </div>
-              <h3 className="text-xl font-semibold mb-3">Com o imóvel vendido você recebe a sua comissão</h3>
+              <h3 className="text-xl font-semibold mb-3">Com a venda realizada você recebe sua comissão</h3>
             </div>
           </div>
         </div>
@@ -62,55 +62,55 @@ export default function CorretorParceiroPage() {
       <section className="py-16 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-serif font-bold text-center mb-12">
-            Por que ser um Corretor Parceiro da Real Fazendas?
+            Por que ser um Parceiro da Vende Fácil Grãos?
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center p-6">
-              <Calendar className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Simplifique seu trabalho</h3>
+              <Handshake className="h-12 w-12 text-verde-campo mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-3">Parceria Simples</h3>
               <p className="text-muted-foreground">
-                Foque na captação de imóveis e deixe o trabalho pesado e burocrático com a Real Fazendas.
+                Foque na conexão entre produtores e compradores, deixe a plataforma cuidar do resto.
               </p>
             </div>
 
             <div className="text-center p-6">
-              <DollarSign className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Receba quando vender</h3>
+              <DollarSign className="h-12 w-12 text-verde-campo mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-3">Comissões Atraentes</h3>
               <p className="text-muted-foreground">
-                Receba uma comissão da Real Fazendas sempre que um imóvel indicado for vendido pela nossa equipe.
+                Receba comissões por cada negociação de grãos realizada através da plataforma.
               </p>
             </div>
 
             <div className="text-center p-6">
-              <Clock className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Sem burocracia</h3>
+              <Clock className="h-12 w-12 text-verde-campo mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-3">Sem Burocracia</h3>
               <p className="text-muted-foreground">
-                Você indica o imóvel e pronto, nossa equipe começa a trabalhar para você.
+                Processo 100% digital e transparente, sem complicações desnecessárias.
               </p>
             </div>
 
             <div className="text-center p-6">
-              <Users className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Não exigimos exclusividade</h3>
+              <Users className="h-12 w-12 text-verde-campo mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-3">Sem Exclusividade</h3>
               <p className="text-muted-foreground">
-                Trabalhe com outros parceiros sem problemas. Aqui você tem total liberdade.
+                Trabalhe com outras plataformas sem problemas. Aqui você tem total liberdade.
               </p>
             </div>
 
             <div className="text-center p-6">
-              <Zap className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Tecnologia de ponta</h3>
+              <Zap className="h-12 w-12 text-verde-campo mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-3">Tecnologia Avançada</h3>
               <p className="text-muted-foreground">
-                A Real Fazendas utiliza as melhores ferramentas para vender seu imóvel mais rápido.
+                Plataforma moderna que conecta produtores e compradores de forma eficiente.
               </p>
             </div>
 
             <div className="text-center p-6">
-              <TrendingUp className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-3">5x mais vendas</h3>
+              <Globe className="h-12 w-12 text-verde-campo mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-3">Mercado Nacional</h3>
               <p className="text-muted-foreground">
-                Nossa estratégia de marketing digital faz com que seus imóveis vendam 5x mais rápido.
+                Acesso a compradores de todo o Brasil, aumentando suas chances de sucesso.
               </p>
             </div>
           </div>
@@ -124,52 +124,45 @@ export default function CorretorParceiroPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="text-primary text-4xl mb-4">"</div>
+              <div className="text-verde-campo text-4xl mb-4">"</div>
               <h3 className="font-semibold mb-2">
-                A Real Fazendas está crescendo a cada dia e tenho grandes oportunidades de ganhos sendo um Corretor
-                Parceiro.
+                A Vende Fácil Grãos está revolucionando o mercado agrícola e eu estou aproveitando essa oportunidade.
               </h3>
               <p className="text-muted-foreground text-sm mb-4">
-                Indico imóveis para a Real Fazendas há mais de 2 anos e não esperava, marketing digital aplicado para
-                encontrar bons clientes compradores e tudo isso sem exclusividade, sem dar de cabeça, com muita
-                facilidade e agilidade. O melhor de tudo o processo foi que todos os proprietários aderiram a Real
-                Fazendas.
+                Como parceiro há mais de 1 ano, conectei dezenas de produtores aos melhores compradores. A plataforma é intuitiva e as comissões são justas. O melhor é que posso trabalhar de qualquer lugar.
               </p>
               <div className="text-sm">
-                <strong>Valdair</strong>
+                <strong>João Silva</strong>
                 <br />
-                <span className="text-muted-foreground">Parceiro Real Fazendas em Luiz Alves</span>
+                <span className="text-muted-foreground">Parceiro em Goiás</span>
               </div>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="text-primary text-4xl mb-4">"</div>
+              <div className="text-verde-campo text-4xl mb-4">"</div>
               <h3 className="font-semibold mb-2">
-                O retorno e o trabalho de vocês tem sido muito bom, o que estava faltando no mercado era isso.
+                Excelente plataforma para conectar produtores e compradores de grãos.
               </h3>
               <p className="text-muted-foreground text-sm mb-4">
-                Cliente e agora eu posso ficar mais tranquila e não preciso ser tanto. Estou gostando muito, faço minha
-                parte e o retorno financeiro tem me ajudado muito.
+                Trabalho com agricultura há anos e nunca vi algo tão eficiente. Como parceiro, consigo ajudar produtores da minha região a venderem seus grãos por preços justos.
               </p>
               <div className="text-sm">
-                <strong>Francisco</strong>
+                <strong>Maria Santos</strong>
                 <br />
-                <span className="text-muted-foreground">Parceiro Real Fazendas em São Luís Dos Montes Belos</span>
+                <span className="text-muted-foreground">Parceira em Mato Grosso</span>
               </div>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="text-primary text-4xl mb-4">"</div>
-              <h3 className="font-semibold mb-2">É o trabalho que eu estava procurando, a parceria certa.</h3>
+              <div className="text-verde-campo text-4xl mb-4">"</div>
+              <h3 className="font-semibold mb-2">A parceria certa para quem quer crescer no mercado agrícola.</h3>
               <p className="text-muted-foreground text-sm mb-4">
-                Trabalhar com a Real Fazendas é muito tranquilo, é um trabalho bem diferente do que eu estava acostumado
-                de casa pelo forma que nós organizou. Estou muito contente com o retorno financeiro, tem sido muito
-                vantajoso essa parceria.
+                Comecei como parceiro há 6 meses e já estou vendo resultados. A plataforma é confiável e as comissões chegam sempre no prazo. Recomendo para todos os colegas.
               </p>
               <div className="text-sm">
-                <strong>Seu Valdír</strong>
+                <strong>Carlos Oliveira</strong>
                 <br />
-                <span className="text-muted-foreground">Parceiro Real Fazendas em Catalão</span>
+                <span className="text-muted-foreground">Parceiro em Tocantins</span>
               </div>
             </div>
           </div>
@@ -180,13 +173,13 @@ export default function CorretorParceiroPage() {
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-serif font-bold mb-6">
-            Junte-se à rede de corretores parceiros da Real Fazendas
+            Junte-se à rede de parceiros da Vende Fácil Grãos
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Inscreva-se gratuitamente e aumente a sua renda mensal de forma rápida e previsível.
+            Inscreva-se gratuitamente e comece a ganhar comissões conectando produtores e compradores de grãos.
           </p>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3">
-            Seja um Corretor Parceiro
+          <Button size="lg" className="bg-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola text-white px-8 py-3 transition-colors">
+            Seja um Parceiro
           </Button>
         </div>
       </section>
