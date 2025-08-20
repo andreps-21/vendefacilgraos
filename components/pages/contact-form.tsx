@@ -62,7 +62,7 @@ export default function ContactForm() {
           className="resize-none"
         />
 
-        <Button type="submit" className="w-full bg-red-600 hover:bg-red-700 text-white">
+        <Button type="submit" className="w-full bg-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola text-white">
           Enviar
         </Button>
       </form>

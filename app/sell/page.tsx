@@ -1,16 +1,15 @@
 "use client"
 
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import CTASection from "@/components/cta-section"
-import WhatsAppFloat from "@/components/whatsapp-float"
+import Header from "@/components/shared/header"
+import Footer from "@/components/shared/footer"
+import CTASection from "@/components/shared/cta-section"
+import WhatsAppFloat from "@/components/shared/whatsapp-float"
 import { Button } from "@/components/ui/button"
 import { Package, Users, Shield, Truck, TrendingUp, Star } from "lucide-react"
 import { useState } from "react"
 import {
   Dialog,
   DialogContent,
-  DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
@@ -42,14 +41,14 @@ export default function VenderPage() {
                 Cadastrar Grãos
               </Button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[600px]">
-              <DialogHeader>
-                <DialogTitle className="text-2xl font-bold text-center text-verde-campo">
+            <DialogContent className="sm:max-w-[600px] p-0 overflow-hidden">
+              <div className="bg-verde-campo p-6 text-white">
+                <DialogTitle className="text-2xl font-bold text-center text-white">
                   Cadastrar Grãos para Venda
                 </DialogTitle>
-              </DialogHeader>
+              </div>
               
-              <div className="space-y-6 py-4">
+              <div className="space-y-6 p-4">
                 {/* Informações Básicas */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
@@ -212,19 +211,24 @@ export default function VenderPage() {
                     placeholder="seu@email.com"
                   />
                 </div>
-              </div>
 
-              <div className="flex justify-end space-x-3 pt-4">
-                <Button 
-                  variant="outline" 
-                  className="border-verde-campo text-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Cancelar
-                </Button>
-                <Button className="bg-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola text-white">
-                  Cadastrar Grãos
-                </Button>
+                {/* Botões */}
+                <div className="flex justify-end space-x-3 pt-6">
+                  <Button 
+                    variant="outline" 
+                    size="default"
+                    className="border-verde-campo text-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola px-6 py-2 text-sm font-medium"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Cancelar
+                  </Button>
+                  <Button 
+                    size="default"
+                    className="bg-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola text-white px-6 py-2 text-sm font-medium"
+                  >
+                    Cadastrar Grãos
+                  </Button>
+                </div>
               </div>
             </DialogContent>
           </Dialog>
@@ -300,14 +304,14 @@ export default function VenderPage() {
                   Começar a vender
                 </Button>
               </DialogTrigger>
-              <DialogContent className="sm:max-w-[600px]">
-                <DialogHeader>
-                  <DialogTitle className="text-2xl font-bold text-center text-verde-campo">
+              <DialogContent className="sm:max-w-[600px] p-0 overflow-hidden">
+                <div className="bg-verde-campo p-6 text-white">
+                  <DialogTitle className="text-2xl font-bold text-center text-white">
                     Cadastrar Grãos para Venda
                   </DialogTitle>
-                </DialogHeader>
+                </div>
                 
-                <div className="space-y-6 py-4">
+                <div className="space-y-6 p-4">
                   {/* Informações Básicas */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
@@ -470,19 +474,24 @@ export default function VenderPage() {
                       placeholder="seu@email.com"
                     />
                   </div>
-                </div>
 
-                <div className="flex justify-end space-x-3 pt-4">
-                  <Button 
-                    variant="outline" 
-                    className="border-verde-campo text-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola"
-                    onClick={() => setIsOpenSecond(false)}
+                  {/* Botões */}
+                  <div className="flex justify-end space-x-3 pt-6">
+                    <Button 
+                      variant="outline" 
+                      size="default"
+                      className="border-verde-campo text-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola px-6 py-2 text-sm font-medium"
+                      onClick={() => setIsOpenSecond(false)}
+                    >
+                      Cancelar
+                    </Button>
+                    <Button 
+                      size="default"
+                      className="bg-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola text-white px-6 py-2 text-sm font-medium"
                   >
-                    Cancelar
-                  </Button>
-                  <Button className="bg-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola text-white">
-                    Cadastrar Grãos
-                  </Button>
+                      Cadastrar Grãos
+                    </Button>
+                  </div>
                 </div>
               </DialogContent>
             </Dialog>

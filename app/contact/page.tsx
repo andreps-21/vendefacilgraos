@@ -1,8 +1,8 @@
-import Header from "@/components/header"
-import Breadcrumb from "@/components/breadcrumb"
-import CTASection from "@/components/cta-section"
-import Footer from "@/components/footer"
-import WhatsAppFloat from "@/components/whatsapp-float"
+import Header from "@/components/shared/header"
+import Breadcrumb from "@/components/shared/breadcrumb"
+import CTASection from "@/components/shared/cta-section"
+import Footer from "@/components/shared/footer"
+import WhatsAppFloat from "@/components/shared/whatsapp-float"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -18,7 +18,7 @@ export default function FaleConoscoPage() {
           <Breadcrumb
             items={[
               { label: "Home", href: "/" },
-              { label: "Fale Conosco", href: "/fale-conosco" },
+              { label: "Fale Conosco", href: "/contact" },
             ]}
           />
           <h1 className="text-3xl font-bold text-foreground mt-4">Fale Conosco</h1>

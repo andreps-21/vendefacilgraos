@@ -1,16 +1,16 @@
 import { Suspense } from "react"
-import Header from "@/components/header"
-import Breadcrumb from "@/components/breadcrumb"
-import PropertyFilters from "@/components/property-filters"
-import PropertyGrid from "@/components/property-grid"
-import CTASection from "@/components/cta-section"
-import Footer from "@/components/footer"
-import WhatsAppFloat from "@/components/whatsapp-float"
+import Header from "@/components/shared/header"
+import Breadcrumb from "@/components/shared/breadcrumb"
+import GrainFilters from "@/components/pages/grain-filters"
+import GrainGrid from "@/components/pages/grain-grid"
+import CTASection from "@/components/shared/cta-section"
+import Footer from "@/components/shared/footer"
+import WhatsAppFloat from "@/components/shared/whatsapp-float"
 
-export default function FazendasPage() {
+export default function GraosPage() {
   const breadcrumbItems = [
     { label: "Home", href: "/" },
-    { label: "Fazendas", href: "/fazendas" },
+    { label: "Comprar Grãos", href: "/buy/list" },
   ]
 
   return (
@@ -22,7 +22,7 @@ export default function FazendasPage() {
         <div className="bg-white border-b">
           <div className="max-w-7xl mx-auto px-4 py-6">
             <Breadcrumb items={breadcrumbItems} />
-            <h1 className="text-3xl font-bold text-gray-900 mt-4">Fazendas</h1>
+            <h1 className="text-3xl font-bold text-gray-900 mt-4">Grãos Disponíveis</h1>
           </div>
         </div>
 
@@ -32,14 +32,14 @@ export default function FazendasPage() {
             {/* Filters Sidebar */}
             <aside className="w-80 flex-shrink-0">
               <Suspense fallback={<div>Carregando filtros...</div>}>
-                <PropertyFilters />
+                <GrainFilters />
               </Suspense>
             </aside>
 
-            {/* Properties Grid */}
+            {/* Grains Grid */}
             <div className="flex-1">
-              <Suspense fallback={<div>Carregando propriedades...</div>}>
-                <PropertyGrid />
+              <Suspense fallback={<div>Carregando grãos...</div>}>
+                <GrainGrid />
               </Suspense>
             </div>
           </div>

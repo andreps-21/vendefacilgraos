@@ -1,111 +1,40 @@
 "use client"
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
+import { useEffect } from "react"
+
 import { Badge } from "@/components/ui/badge"
 import { MapPin, Calendar, Truck } from "lucide-react"
 import Link from "next/link"
-
-const grains = [
-  {
-    id: 1,
-    slug: "soja-premium-sorriso-mt",
-    type: "Soja",
-    quality: "Premium",
-    price: 89.5,
-    quantity: 5000,
-    location: "Sorriso, MT",
-    producer: "Fazenda São João",
-    harvestDate: "Mar 2024",
-    delivery: true,
-    image: "/soybean-field-golden-harvest.png",
-    description: "Soja de alta qualidade, colheita recente com excelente padrão de grãos.",
-  },
-  {
-    id: 2,
-    slug: "milho-safrinha-rio-verde-go",
-    type: "Milho",
-    quality: "Padrão",
-    price: 45.8,
-    quantity: 8500,
-    location: "Rio Verde, GO",
-    producer: "Agropecuária Cerrado",
-    harvestDate: "Jul 2024",
-    delivery: true,
-    image: "/corn-field-golden-kernels.png",
-    description: "Milho safrinha com ótima produtividade e qualidade garantida.",
-  },
-  {
-    id: 3,
-    slug: "feijao-carioca-primavera-mt",
-    type: "Feijão",
-    quality: "Premium",
-    price: 125.0,
-    quantity: 1200,
-    location: "Primavera do Leste, MT",
-    producer: "Fazenda Boa Vista",
-    harvestDate: "Jun 2024",
-    delivery: false,
-    image: "/bean-field-harvest.png",
-    description: "Feijão carioca tipo 1, grãos uniformes e sem defeitos.",
-  },
-  {
-    id: 4,
-    slug: "soja-organica-sinop-mt",
-    type: "Soja",
-    quality: "Orgânico",
-    price: 110.0,
-    quantity: 2800,
-    location: "Sinop, MT",
-    producer: "Fazenda Verde Vida",
-    harvestDate: "Mar 2024",
-    delivery: true,
-    image: "/soybean-field-golden-harvest.png",
-    description: "Soja orgânica certificada, produzida sem agrotóxicos.",
-  },
-  {
-    id: 5,
-    slug: "milho-pipoca-dourados-ms",
-    type: "Milho",
-    quality: "Premium",
-    price: 78.9,
-    quantity: 3500,
-    location: "Dourados, MS",
-    producer: "Cooperativa Sul",
-    harvestDate: "Jul 2024",
-    delivery: true,
-    image: "/corn-field-golden-kernels.png",
-    description: "Milho especial para pipoca, grãos selecionados e uniformes.",
-  },
-  {
-    id: 6,
-    slug: "arroz-irrigado-pelotas-rs",
-    type: "Arroz",
-    quality: "Premium",
-    price: 95.5,
-    quantity: 4200,
-    location: "Pelotas, RS",
-    producer: "Rizicultura Gaúcha",
-    harvestDate: "Abr 2024",
-    delivery: true,
-    image: "/golden-grain-field.png",
-    description: "Arroz irrigado tipo 1, grãos longos e de excelente qualidade.",
-  },
-]
+import { useGrainStore } from "@/lib/store/grain-store"
+import { mockGrains } from "@/lib/data/mock-grains"
 
 export default function GrainGrid() {
-  const [currentPage, setCurrentPage] = useState(1)
-  const itemsPerPage = 6
-  const totalPages = Math.ceil(grains.length / itemsPerPage)
+  const { 
+    currentGrains, 
+    totalPages, 
+    currentPage, 
+    setCurrentPage, 
+    setGrains,
+    filteredGrains,
+    grains
+  } = useGrainStore()
 
-  const currentGrains = grains.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
+  // Inicializar dados mockados
+  useEffect(() => {
+    if (grains.length === 0) {
+      setGrains(mockGrains)
+    }
+  }, [grains.length, setGrains])
+
+  // Dados para mostrar (fallback para filteredGrains se currentGrains estiver vazio)
+  const grainsToShow = currentGrains.length > 0 ? currentGrains : filteredGrains
 
   const getQualityColor = (quality: string) => {
     switch (quality) {
       case "Premium":
-        return "bg-milho-yellow text-terra-brown"
+        return "bg-amarelo-milho text-marrom-terra"
       case "Orgânico":
-        return "bg-campo-green text-white"
+        return "bg-verde-campo text-white"
       default:
         return "bg-gray-100 text-gray-800"
     }
@@ -116,7 +45,7 @@ export default function GrainGrid() {
       {/* Results Header */}
       <div className="flex justify-between items-center mb-6">
         <p className="text-gray-600">
-          Mostrando {currentGrains.length} de {grains.length} resultados
+          Mostrando {grainsToShow.length} de {filteredGrains.length} resultados
         </p>
         <select className="border rounded-lg px-3 py-2 text-sm">
           <option>Ordenar por: Mais recentes</option>
@@ -128,7 +57,12 @@ export default function GrainGrid() {
 
       {/* Grains Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-        {currentGrains.map((grain) => (
+        {grainsToShow.length === 0 && (
+          <div className="col-span-full text-center py-8">
+            <p className="text-gray-500">Nenhum grão encontrado.</p>
+          </div>
+        )}
+        {grainsToShow.map((grain) => (
           <div
             key={grain.id}
             className="bg-white rounded-lg shadow-sm border overflow-hidden hover:shadow-md transition-shadow"
@@ -145,7 +79,7 @@ export default function GrainGrid() {
             <div className="p-4">
               <div className="flex justify-between items-start mb-2">
                 <h3 className="font-semibold text-lg text-gray-900">{grain.type}</h3>
-                <span className="text-2xl font-bold text-campo-green">
+                <span className="text-2xl font-bold text-verde-campo">
                   R$ {grain.price.toFixed(2)}
                   <span className="text-sm font-normal text-gray-500">/saca</span>
                 </span>
@@ -177,7 +111,7 @@ export default function GrainGrid() {
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-500">Entrega:</span>
                   <span
-                    className={`font-medium flex items-center ${grain.delivery ? "text-campo-green" : "text-gray-500"}`}
+                    className={`font-medium flex items-center ${grain.delivery ? "text-verde-campo" : "text-gray-500"}`}
                   >
                     <Truck className="w-3 h-3 mr-1" />
                     {grain.delivery ? "Disponível" : "Retirada"}
@@ -186,7 +120,7 @@ export default function GrainGrid() {
               </div>
 
               <Link
-                href={`/grao/${grain.slug}`}
+                href={`/buy/detail/${grain.slug}`}
                 className="w-full bg-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola text-white py-2 px-4 rounded-md font-medium transition-colors text-center block"
               >
                 Ver Detalhes
@@ -203,7 +137,7 @@ export default function GrainGrid() {
             key={page}
             onClick={() => setCurrentPage(page)}
             className={`px-3 py-2 rounded-lg text-sm font-medium ${
-              currentPage === page ? "bg-campo-green text-white" : "bg-white text-gray-700 border hover:bg-gray-50"
+              currentPage === page ? "bg-verde-campo text-white" : "bg-white text-gray-700 border hover:bg-gray-50"
             }`}
           >
             {page}

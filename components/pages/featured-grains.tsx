@@ -1,57 +1,21 @@
 import Link from "next/link"
 import { MapPin, Calendar } from "lucide-react"
+import { mockGrains } from "@/lib/data/mock-grains"
 
 export default function FeaturedGrains() {
-  const grains = [
-    {
-      id: 1,
-      title: "Soja Premium - 1000 sacas",
-      location: "Palmas, Tocantins",
-      price: "R$ 85,00",
-      unit: "por saca",
-      image: "/soybean-field-golden-harvest.png",
-      producer: "Fazenda São João",
-      harvest: "Safra 2024",
-      quality: "Tipo 1",
-      slug: "soja-premium-1000-sacas-palmas-to",
-    },
-    {
-      id: 2,
-      title: "Milho Safrinha - 2500 sacas",
-      location: "Araguaína, Tocantins",
-      price: "R$ 42,00",
-      unit: "por saca",
-      image: "/corn-field-golden-kernels.png",
-      producer: "Agropecuária Verde",
-      harvest: "Safrinha 2024",
-      quality: "Tipo 2",
-      slug: "milho-safrinha-2500-sacas-araguaina-to",
-    },
-    {
-      id: 3,
-      title: "Feijão Carioca - 500 sacas",
-      location: "Gurupi, Tocantins",
-      price: "R$ 180,00",
-      unit: "por saca",
-      image: "/bean-field-harvest.png",
-      producer: "Fazenda Cristal",
-      harvest: "Safra 2024",
-      quality: "Tipo 1",
-      slug: "feijao-carioca-500-sacas-gurupi-to",
-    },
-    {
-      id: 4,
-      title: "Soja Convencional - 800 sacas",
-      location: "Porto Nacional, Tocantins",
-      price: "R$ 82,00",
-      unit: "por saca",
-      image: "/placeholder-f3noz.png",
-      producer: "Fazenda Primavera",
-      harvest: "Safra 2024",
-      quality: "Tipo 2",
-      slug: "soja-convencional-800-sacas-porto-nacional-to",
-    },
-  ]
+  // Usar apenas os primeiros 4 grãos dos dados mockados
+  const grains = mockGrains.slice(0, 4).map(grain => ({
+    id: grain.id,
+    title: `${grain.type} ${grain.quality} - ${grain.quantity.toLocaleString()} sacas`,
+    location: grain.location,
+    price: `R$ ${grain.price.toFixed(2).replace('.', ',')}`,
+    unit: "por saca",
+    image: grain.image,
+    producer: grain.producer,
+    harvest: grain.harvestDate,
+    quality: grain.quality,
+    slug: grain.slug,
+  }))
 
   return (
     <section className="py-16 bg-white">
@@ -91,7 +55,7 @@ export default function FeaturedGrains() {
                 </div>
 
                 <Link
-                  href={`/grao/${grain.slug}`}
+                  href={`/buy/detail/${grain.slug}`}
                   className="w-full bg-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola text-white py-2 px-4 rounded-md font-medium transition-colors text-center block"
                 >
                   Ver Detalhes

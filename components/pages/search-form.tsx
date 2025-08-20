@@ -30,11 +30,12 @@ export function SearchForm() {
               <SelectValue placeholder="Selecione um estado" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="mt">Mato Grosso</SelectItem>
+              <SelectItem value="to">Tocantins</SelectItem>
               <SelectItem value="go">Goiás</SelectItem>
+              <SelectItem value="mt">Mato Grosso</SelectItem>
+              <SelectItem value="ms">Mato Grosso do Sul</SelectItem>
               <SelectItem value="pr">Paraná</SelectItem>
               <SelectItem value="rs">Rio Grande do Sul</SelectItem>
-              <SelectItem value="ms">Mato Grosso do Sul</SelectItem>
               <SelectItem value="mg">Minas Gerais</SelectItem>
               <SelectItem value="ba">Bahia</SelectItem>
             </SelectContent>
@@ -47,10 +48,10 @@ export function SearchForm() {
               <SelectValue placeholder="Selecione uma cidade" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="sorriso">Sorriso</SelectItem>
-              <SelectItem value="rio-verde">Rio Verde</SelectItem>
-              <SelectItem value="primavera">Primavera do Leste</SelectItem>
-              <SelectItem value="cristalina">Cristalina</SelectItem>
+              <SelectItem value="palmas">Palmas</SelectItem>
+              <SelectItem value="araguaina">Araguaína</SelectItem>
+              <SelectItem value="gurupi">Gurupi</SelectItem>
+              <SelectItem value="porto-nacional">Porto Nacional</SelectItem>
             </SelectContent>
           </Select>
         </div>

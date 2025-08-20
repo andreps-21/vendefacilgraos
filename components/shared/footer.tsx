@@ -20,27 +20,27 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Links Úteis</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
+                <a href="/about" className="text-muted-foreground hover:text-accent transition-colors">
                   Quem Somos
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
+                <a href="/buy/list" className="text-muted-foreground hover:text-accent transition-colors">
                   Comprar Grãos
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
+                <a href="/sell" className="text-muted-foreground hover:text-accent transition-colors">
                   Vender Grãos
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
+                <a href="/partner" className="text-muted-foreground hover:text-accent transition-colors">
                   Seja um Parceiro
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
+                <a href="/contact" className="text-muted-foreground hover:text-accent transition-colors">
                   Fale Conosco
                 </a>
               </li>

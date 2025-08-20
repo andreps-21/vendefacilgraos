@@ -18,8 +18,8 @@ const sourceSans = Source_Sans_3({
 })
 
 export const metadata: Metadata = {
-  title: "Real Fazendas - Especialista em Fazendas",
-  description: "Encontre sua fazenda dos sonhos. Explore as melhores propriedades rurais do Brasil.",
+  title: "Vende Fácil Grãos - Conectando Produtores e Compradores",
+  description: "Plataforma especializada em conectar produtores rurais diretamente aos compradores de grãos. Venda seus grãos com agilidade e transparência.",
   generator: "v0.app",
 }
 
@@ -30,7 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${playfair.variable} ${sourceSans.variable} antialiased`}>
-      <body className="font-sans">{children}</body>
+      <body className="font-sans">
+        {children}
+      </body>
     </html>
   )
 }

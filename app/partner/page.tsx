@@ -1,9 +1,9 @@
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import CTASection from "@/components/cta-section"
-import WhatsAppFloat from "@/components/whatsapp-float"
+import Header from "@/components/shared/header"
+import Footer from "@/components/shared/footer"
+import CTASection from "@/components/shared/cta-section"
+import WhatsAppFloat from "@/components/shared/whatsapp-float"
 import { Button } from "@/components/ui/button"
-import { Calendar, DollarSign, Clock, Users, Zap, TrendingUp, Handshake, Globe } from "lucide-react"
+import { DollarSign, Clock, Users, Zap, Handshake, Globe } from "lucide-react"
 
 export default function CorretorParceiroPage() {
   return (
@@ -124,7 +124,7 @@ export default function CorretorParceiroPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="text-verde-campo text-4xl mb-4">"</div>
+              <div className="text-verde-campo text-4xl mb-4">&quot;</div>
               <h3 className="font-semibold mb-2">
                 A Vende Fácil Grãos está revolucionando o mercado agrícola e eu estou aproveitando essa oportunidade.
               </h3>
@@ -139,7 +139,7 @@ export default function CorretorParceiroPage() {
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="text-verde-campo text-4xl mb-4">"</div>
+              <div className="text-verde-campo text-4xl mb-4">&quot;</div>
               <h3 className="font-semibold mb-2">
                 Excelente plataforma para conectar produtores e compradores de grãos.
               </h3>
@@ -154,7 +154,7 @@ export default function CorretorParceiroPage() {
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="text-verde-campo text-4xl mb-4">"</div>
+              <div className="text-verde-campo text-4xl mb-4">&quot;</div>
               <h3 className="font-semibold mb-2">A parceria certa para quem quer crescer no mercado agrícola.</h3>
               <p className="text-muted-foreground text-sm mb-4">
                 Comecei como parceiro há 6 meses e já estou vendo resultados. A plataforma é confiável e as comissões chegam sempre no prazo. Recomendo para todos os colegas.

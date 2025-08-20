@@ -1,8 +1,8 @@
-import Header from "@/components/header"
-import Breadcrumb from "@/components/breadcrumb"
-import CTASection from "@/components/cta-section"
-import Footer from "@/components/footer"
-import WhatsAppFloat from "@/components/whatsapp-float"
+import Header from "@/components/shared/header"
+import Breadcrumb from "@/components/shared/breadcrumb"
+import CTASection from "@/components/shared/cta-section"
+import Footer from "@/components/shared/footer"
+import WhatsAppFloat from "@/components/shared/whatsapp-float"
 import { Building2, Target, Eye } from "lucide-react"
 
 export default function QuemSomosPage() {
@@ -17,7 +17,7 @@ export default function QuemSomosPage() {
             <Breadcrumb
               items={[
                 { label: "Home", href: "/" },
-                { label: "Quem Somos", href: "/quem-somos" },
+                { label: "Quem Somos", href: "/about" },
               ]}
             />
             <h1 className="text-4xl font-bold text-foreground mt-6 font-serif">Quem Somos</h1>

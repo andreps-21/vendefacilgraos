@@ -3,10 +3,10 @@
 import { Phone, Mail, Search } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import {
   Dialog,
   DialogContent,
-  DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
@@ -16,6 +16,15 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Textarea } from "@/components/ui/textarea"
 
 export default function Header() {
+  const pathname = usePathname()
+  
+  // Função para verificar se o link está ativo
+  const isActive = (path: string) => {
+    if (path === "/" && pathname === "/") return true
+    if (path !== "/" && pathname.startsWith(path)) return true
+    return false
+  }
+  
   return (
     <header>
       <div className="bg-verde-campo text-white py-2 px-4">
@@ -34,14 +43,14 @@ export default function Header() {
                   <span>Receber uma ligação</span>
                 </button>
               </DialogTrigger>
-              <DialogContent className="sm:max-w-[500px]">
-                <DialogHeader>
-                  <DialogTitle className="text-2xl font-bold text-center text-verde-campo">
+              <DialogContent className="sm:max-w-[500px] p-0 overflow-hidden">
+                <div className="bg-verde-campo p-6 text-white">
+                  <DialogTitle className="text-2xl font-bold text-center text-white">
                     Solicitar Ligação
                   </DialogTitle>
-                </DialogHeader>
+                </div>
                 
-                <div className="space-y-6 py-4">
+                <div className="space-y-6 p-6">
                   {/* Informações Pessoais */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
@@ -154,22 +163,64 @@ export default function Header() {
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-foreground hover:text-verde-campo transition-colors">
+            <Link 
+              href="/" 
+              className={`transition-colors ${
+                isActive("/") 
+                  ? "text-verde-campo font-semibold" 
+                  : "text-foreground hover:text-verde-campo"
+              }`}
+            >
               Home
             </Link>
-            <Link href="/quem-somos" className="text-foreground hover:text-verde-campo transition-colors">
+            <Link 
+              href="/about" 
+              className={`transition-colors ${
+                isActive("/about") 
+                  ? "text-verde-campo font-semibold" 
+                  : "text-foreground hover:text-verde-campo"
+              }`}
+            >
               Quem Somos
             </Link>
-            <Link href="/graos" className="text-foreground hover:text-verde-campo transition-colors">
+            <Link 
+              href="/buy/list" 
+              className={`transition-colors ${
+                isActive("/buy") 
+                  ? "text-verde-campo font-semibold" 
+                  : "text-foreground hover:text-verde-campo"
+              }`}
+            >
               Comprar Grãos
             </Link>
-            <Link href="/vender" className="text-foreground hover:text-verde-campo transition-colors">
+            <Link 
+              href="/sell" 
+              className={`transition-colors ${
+                isActive("/sell") 
+                  ? "text-verde-campo font-semibold" 
+                  : "text-foreground hover:text-verde-campo"
+              }`}
+            >
               Vender Grãos
             </Link>
-            <Link href="/corretor-parceiro" className="text-foreground hover:text-verde-campo transition-colors">
+            <Link 
+              href="/partner" 
+              className={`transition-colors ${
+                isActive("/partner") 
+                  ? "text-verde-campo font-semibold" 
+                  : "text-foreground hover:text-verde-campo"
+              }`}
+            >
               Seja Parceiro
             </Link>
-            <Link href="/fale-conosco" className="text-foreground hover:text-verde-campo transition-colors">
+            <Link 
+              href="/contact" 
+              className={`transition-colors ${
+                isActive("/contact") 
+                  ? "text-verde-campo font-semibold" 
+                  : "text-foreground hover:text-verde-campo"
+              }`}
+            >
               Fale Conosco
             </Link>
           </div>
