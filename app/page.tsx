@@ -2,7 +2,7 @@ import Header from "@/components/shared/header"
 import { HeroSection } from "@/components/shared/hero-section"
 import { SearchForm } from "@/components/pages/search-form"
 import FeaturedGrains from "@/components/pages/featured-grains"
-import { PopularSearches } from "@/components/shared/popular-searches"
+import { MarketInsights } from "@/components/shared/market-insights"
 import CTASection from "@/components/shared/cta-section"
 import Footer from "@/components/shared/footer"
 import WhatsAppFloat from "@/components/shared/whatsapp-float"
@@ -14,7 +14,7 @@ export default function HomePage() {
       <HeroSection />
       <SearchForm />
       <FeaturedGrains />
-      <PopularSearches />
+      <MarketInsights />
       <CTASection />
       <Footer />
       <WhatsAppFloat />
