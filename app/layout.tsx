@@ -21,6 +21,14 @@ export const metadata: Metadata = {
   title: "Vende Fácil Grãos - Conectando Produtores e Compradores",
   description: "Plataforma especializada em conectar produtores rurais diretamente aos compradores de grãos. Venda seus grãos com agilidade e transparência.",
   generator: "v0.app",
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', type: 'image/x-icon' }
+    ],
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({

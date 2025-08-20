@@ -1,6 +1,7 @@
 "use client"
 
 import { Phone, Mail, Search } from "lucide-react"
+import { Logo } from "./logo"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -137,15 +138,16 @@ export default function Header() {
                       </SelectContent>
                     </Select>
                   </div>
-                </div>
 
-                <div className="flex justify-end space-x-3 pt-4">
-                  <Button variant="outline" className="border-verde-campo text-verde-campo hover:bg-verde-campo hover:text-white">
-                    Cancelar
-                  </Button>
-                  <Button className="bg-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola text-white">
-                    Solicitar Ligação
-                  </Button>
+                  {/* Botões */}
+                  <div className="flex justify-end space-x-3 pt-6">
+                    <Button variant="outline" className="border-verde-campo text-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola px-6 py-2 text-sm font-medium">
+                      Cancelar
+                    </Button>
+                    <Button className="bg-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola text-white px-6 py-2 text-sm font-medium">
+                      Solicitar Ligação
+                    </Button>
+                  </div>
                 </div>
               </DialogContent>
             </Dialog>
@@ -156,9 +158,15 @@ export default function Header() {
       <nav className="bg-white shadow-sm py-4 px-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center">
-            <div className="text-verde-campo font-bold text-2xl font-serif">
-              VENDE FÁCIL
-              <span className="text-sm block leading-none text-marrom-terra">GRÃOS</span>
+            <div className="flex items-center">
+              {/* Logo SVG - Maior e sem texto */}
+              <Logo width={60} height={48} showText={false} className="flex-shrink-0" />
+              
+              {/* Texto da Marca separado */}
+              <div className="ml-3 text-verde-campo font-bold text-2xl font-serif">
+                VENDE FÁCIL
+                <span className="text-sm block leading-none text-marrom-terra">GRÃOS</span>
+              </div>
             </div>
           </Link>
 
