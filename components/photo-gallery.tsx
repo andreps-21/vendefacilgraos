@@ -12,7 +12,7 @@ export default function PhotoGallery({ images }: PhotoGalleryProps) {
 
   return (
     <div className="bg-white rounded-lg shadow-sm p-6">
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">Galeria de Fotos</h3>
+      <h3 className="text-lg font-semibold text-gray-900 mb-4">Fotos dos Grãos</h3>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {images.map((image, index) => (
@@ -23,7 +23,7 @@ export default function PhotoGallery({ images }: PhotoGalleryProps) {
           >
             <Image
               src={image || "/placeholder.svg"}
-              alt={`Foto ${index + 1} da propriedade`}
+              alt={`Foto ${index + 1} dos grãos`}
               fill
               className="object-cover"
             />

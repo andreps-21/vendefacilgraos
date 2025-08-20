@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
@@ -14,13 +15,15 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Textarea } from "@/components/ui/textarea"
 
 export default function CTASection() {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
     <section className="bg-verde-campo text-white py-16 px-4">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl font-bold font-serif mb-4">Precisa vender seus grãos?</h2>
         <p className="text-lg mb-8 opacity-90">Conectamos você diretamente aos melhores compradores do mercado, sem intermediários e com preços justos.</p>
         
-        <Dialog>
+        <Dialog open={isOpen} onOpenChange={setIsOpen}>
           <DialogTrigger asChild>
             <Button variant="secondary" size="lg" className="bg-white text-verde-campo hover:bg-white/90">
               Cadastrar Grãos →
@@ -199,11 +202,15 @@ export default function CTASection() {
             </div>
 
             <div className="flex justify-end space-x-3 pt-4">
-              <Button variant="outline" className="border-verde-campo text-verde-campo hover:bg-verde-campo hover:text-white">
+              <Button 
+                variant="outline" 
+                className="border-verde-campo text-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola"
+                onClick={() => setIsOpen(false)}
+              >
                 Cancelar
               </Button>
               <Button className="bg-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola text-white">
-                Cadastrar Grãos
+                Enviar Pedido de Cadastro
               </Button>
             </div>
           </DialogContent>
