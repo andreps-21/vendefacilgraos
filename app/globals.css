@@ -110,4 +110,23 @@
   .focus-visible\:ring-ring\/50:focus-visible {
     box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2) !important;
   }
+  
+  /* Estilos personalizados para scroll em modais */
+  .modal-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .modal-scroll::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 3px;
+  }
+  
+  .modal-scroll::-webkit-scrollbar-thumb {
+    background: #4caf50;
+    border-radius: 3px;
+  }
+  
+  .modal-scroll::-webkit-scrollbar-thumb:hover {
+    background: #45a049;
+  }
 }

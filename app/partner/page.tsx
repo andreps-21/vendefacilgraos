@@ -20,9 +20,15 @@ export default function CorretorParceiroPage() {
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Conecte produtores rurais aos melhores compradores e receba comissões por cada negociação realizada.
           </p>
-          <Button size="lg" className="bg-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola text-white px-8 py-3 transition-colors">
-            Seja um Parceiro
-          </Button>
+          <a 
+            href="https://wa.me/556391208484?text=Olá! Tenho interesse em ser um parceiro da Vende Fácil Grãos." 
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button size="lg" className="bg-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola text-white px-8 py-3 transition-colors">
+              Seja um Parceiro
+            </Button>
+          </a>
         </div>
       </section>
 
@@ -178,9 +184,15 @@ export default function CorretorParceiroPage() {
           <p className="text-lg text-muted-foreground mb-8">
             Inscreva-se gratuitamente e comece a ganhar comissões conectando produtores e compradores de grãos.
           </p>
-          <Button size="lg" className="bg-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola text-white px-8 py-3 transition-colors">
-            Seja um Parceiro
-          </Button>
+          <a 
+            href="https://wa.me/556391208484?text=Olá! Tenho interesse em ser um parceiro da Vende Fácil Grãos." 
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button size="lg" className="bg-verde-campo hover:bg-amarelo-milho hover:text-preto-agricola text-white px-8 py-3 transition-colors">
+              Seja um Parceiro
+            </Button>
+          </a>
         </div>
       </section>
 

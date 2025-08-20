@@ -48,11 +48,11 @@ export default function VenderPage() {
                 </DialogTitle>
               </div>
               
-              <div className="space-y-6 p-4">
-                {/* Informações Básicas */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="grain-type">Tipo de Grão *</Label>
+                              <div className="space-y-6 p-4 max-h-[70vh] overflow-y-auto modal-scroll">
+                  {/* Informações Básicas */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="grain-type">Tipo de Grão *</Label>
                     <Select>
                       <SelectTrigger>
                         <SelectValue placeholder="Selecione o tipo" />
@@ -311,38 +311,38 @@ export default function VenderPage() {
                   </DialogTitle>
                 </div>
                 
-                <div className="space-y-6 p-4">
-                  {/* Informações Básicas */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="grain-type-2">Tipo de Grão *</Label>
-                      <Select>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Selecione o tipo" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="soja">Soja</SelectItem>
-                          <SelectItem value="milho">Milho</SelectItem>
-                          <SelectItem value="feijao">Feijão</SelectItem>
-                          <SelectItem value="arroz">Arroz</SelectItem>
-                          <SelectItem value="trigo">Trigo</SelectItem>
-                          <SelectItem value="sorgo">Sorgo</SelectItem>
-                          <SelectItem value="girassol">Girassol</SelectItem>
-                          <SelectItem value="outros">Outros</SelectItem>
-                        </SelectContent>
-                      </Select>
+                                 <div className="space-y-6 p-4 max-h-[70vh] overflow-y-auto modal-scroll">
+                   {/* Informações Básicas */}
+                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                     <div className="space-y-2">
+                       <Label htmlFor="grain-type-2">Tipo de Grão *</Label>
+                        <Select>
+                          <SelectTrigger>
+                            <SelectValue placeholder="Selecione o tipo" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="soja">Soja</SelectItem>
+                            <SelectItem value="milho">Milho</SelectItem>
+                            <SelectItem value="feijao">Feijão</SelectItem>
+                            <SelectItem value="arroz">Arroz</SelectItem>
+                            <SelectItem value="trigo">Trigo</SelectItem>
+                            <SelectItem value="sorgo">Sorgo</SelectItem>
+                            <SelectItem value="girassol">Girassol</SelectItem>
+                            <SelectItem value="outros">Outros</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+                      
+                      <div className="space-y-2">
+                        <Label htmlFor="quantity-2">Quantidade (Sacas) *</Label>
+                        <Input
+                          id="quantity-2"
+                          type="number"
+                          placeholder="Ex: 1000"
+                          min="1"
+                        />
+                      </div>
                     </div>
-                    
-                    <div className="space-y-2">
-                      <Label htmlFor="quantity-2">Quantidade (Sacas) *</Label>
-                      <Input
-                        id="quantity-2"
-                        type="number"
-                        placeholder="Ex: 1000"
-                        min="1"
-                      />
-                    </div>
-                  </div>
 
                   {/* Localização */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

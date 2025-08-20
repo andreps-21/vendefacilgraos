@@ -51,7 +51,7 @@ export default function Header() {
                   </DialogTitle>
                 </div>
                 
-                <div className="space-y-6 p-6">
+                <div className="space-y-6 p-6 max-h-[70vh] overflow-y-auto modal-scroll">
                   {/* Informações Pessoais */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
